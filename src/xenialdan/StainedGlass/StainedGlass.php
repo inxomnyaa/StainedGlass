@@ -59,19 +59,4 @@ class StainedGlass extends Transparent {
 		];
 		return $names[$this->meta]??"Unknown";
 	}
-
-
-	public function place(Item $item, Block $block, Block $target, $face, $fx, $fy, $fz, Player $player = null) {
-		#$this->getLevel()->setBlock($block, Block::get(Block::GLASS), true, true);
-		$this->getLevel()->setBlock($block, Block::get(Block::STAINED_GLASS), true, true);
-		$p = new LevelEventPacket();
-		$p->evid = LevelEventPacket::EVENT_PARTICLE_BLOCK_FORCE_FIELD;
-		$p->x = $this->x + 0.5;
-		$p->y = $this->y + 0.5;
-		$p->z = $this->z + 0.5;
-		$p->data = 0;
-		$this->getLevel()->addChunkPacket($this->x >> 4, $this->z >> 4, $p);
-		return true;
-	}
-
 }

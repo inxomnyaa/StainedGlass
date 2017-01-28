@@ -18,6 +18,7 @@ class Main extends PluginBase {
 		Item::$list[Block::STAINED_GLASS] = StainedGlass::class;
 		for ($i = 0; $i <= 15; $i++) {
 			$item = Item::get(Block::STAINED_GLASS, $i);
+			$item->setCustomName($item->getName());
 			Item::addCreativeItem($item);
 		}
 	}

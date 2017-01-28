@@ -1,6 +1,6 @@
   name: StainedGlass
   main: xenialdan\StainedGlass\Main
-  version: 2.5.0
+  version: 2.5.1
   api: ['*', '3.0.0-ALPHA3']
   load: POSTWORLD
   authors: [XenialDan]
